@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA catch-all redirect (handles client-side routing)
+# /api/* requests are handled by the fetch interceptor in main.jsx
+# which rewrites them to the VITE_API_URL (Render backend)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
